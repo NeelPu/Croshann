@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crosh Ann - Handcrafted Crochet Accessories</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== NAVIGATION SECTION ===== -->
+    <!-- CUSTOMIZATION TIP: The logo image source is set in the CSS file. To change the logo, replace the base64 string in the .nav-logo img CSS rule -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo Section - Clickable home link -->
+            <div class="nav-logo">
+                <a href="#home">
+                    <img src="logo.jpeg" alt="Crosh Ann Logo" class="logo-image">
+                    <h1>Crosh Ann</h1>
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <!-- REMOVED: Cart functionality as requested -->
+            </ul>
+            
+            <!-- Mobile Menu Button -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== ENHANCED HERO SECTION ===== -->
+    <!-- CUSTOMIZATION TIP: To change hero content, modify the text below. Background pattern can be changed in CSS -->
+    <section id="home" class="hero">
+        <!-- Decorative patterns for visual appeal -->
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-badge">✨ Handcrafted with Love ✨</div>
+            <h1 class="hero-title">Crosh Ann</h1>
+            <p class="hero-tagline">Handcrafted with Love, Crocheted with Care</p>
+            <p class="hero-description">Premium handmade crochet accessories including keychains, charms, and small amigurumi. Each piece is carefully crafted with high-quality yarn and attention to detail, bringing joy and personality to your everyday essentials.</p>
+            
+            <!-- Call-to-action buttons -->
+            <div class="hero-actions">
+                <a href="#products" class="btn btn--primary btn--lg">Explore Collection</a>
+                <a href="https://wa.me/919876543210" target="_blank" class="btn btn--outline btn--lg">
+                    📱 WhatsApp Order
+                </a>
+            </div>
+            
+            <!-- Feature highlights -->
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <span class="feature-icon">🧶</span>
+                    <span>100% Handmade</span>
+                </div>
+                <div class="hero-feature">
+                    <span class="feature-icon">⭐</span>
+                    <span>Premium Quality</span>
+                </div>
+                <div class="hero-feature">
+                    <span class="feature-icon">🚚</span>
+                    <span>Fast Delivery</span>
+                </div>
+                <!-- moved/marked so we can position it under "Premium Quality" -->
+                <div class="hero-feature hero-feature--custom">
+                    <span class="feature-icon">💝</span>
+                    <span>Custom Orders</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES SECTION ===== -->
+    <!-- CUSTOMIZATION TIP: To modify features, edit the content below. Icons can be changed by replacing the emoji -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Crosh Ann?</h2>
+                <p>Discover what makes our handcrafted accessories special</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧶</div>
+                    <h3>100% Handmade Quality</h3>
+                    <p>Every piece is carefully crafted by hand with love and attention to detail, ensuring uniqueness in every stitch</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Premium Yarn Materials</h3>
+                    <p>We use only the finest quality yarns for durability, comfort, and long-lasting beauty</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Unique Custom Designs</h3>
+                    <p>Create personalized pieces tailored to your preferences with our custom order service</p>
+                </div>
+                <div class="feature-card feature-card--centered">
+                    <div class="feature-icon">💝</div>
+                    <h3>Made with Love & Care</h3>
+                    <p>Each piece is lovingly crafted with genuine care and attention, ensuring every item carries the warmth of handmade artistry</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS SECTION ===== -->
+    <!-- CUSTOMIZATION TIP: Products are loaded from JavaScript. To modify products, see the 'products' array in app.js -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Handcrafted Collection</h2>
+                <p>Discover our beautiful range of crocheted keychains, charms, and accessories</p>
+            </div>
+            
+            <!-- Product Filters -->
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="Animal Keychains">Animal Keychains</button>
+                <button class="filter-btn" data-filter="Flower Keychains">Flower Keychains</button>
+                <button class="filter-btn" data-filter="Food Keychains">Food Keychains</button>
+                <button class="filter-btn" data-filter="Bag Charms">Bag Charms</button>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search for products...">
+            </div>
+                        `<span class="product-price">$${product.price}</span>`
+            <!-- Products Grid - Products are dynamically loaded from JavaScript -->
+            <!-- CUSTOMIZATION TIP: Products are automatically generated from the products array in app.js -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here from JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <!-- CUSTOMIZATION TIP: Edit the text content below to change the about section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Crosh Ann</h2>
+                    <p>Welcome to Crosh Ann, where every stitch tells a story of passion and creativity. Founded with a deep love for the timeless art of crochet, we specialize in creating beautiful, handmade accessories that bring joy and personality to your everyday life.</p>
+                    
+                    <p>Our journey began with a simple hook and yarn, driven by the desire to create something beautiful, meaningful, and uniquely crafted. Each piece in our collection is meticulously made using premium quality yarns, ensuring durability while maintaining the soft, comfortable feel that makes our products so special.</p>
+                    
+                    <p>From adorable animal keychains to elegant bag charms, every item is made with love, attention to detail, and a commitment to quality craftsmanship. We believe in the beauty of handmade crafts and the personal touch that comes with each creation.</p>
+                    
+                    <!-- Mission points -->
+                    <div class="mission-points">
+                        <div class="mission-point">
+                            <span class="mission-icon">💝</span>
+                            <div>
+                                <h4>Made with Love</h4>
+                                <p>Every piece is crafted with care and attention to detail</p>
+                            </div>
+                        </div>
+                        <div class="mission-point">
+                            <span class="mission-icon">🌱</span>
+                            <div>
+                                <h4>Sustainable Materials</h4>
+                                <p>We use eco-friendly, high-quality yarns for all our products</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <!-- CUSTOMIZATION TIP: Replace this placeholder with actual artisan photo -->
+                    <div class="image-placeholder">
+                        <span>🧶</span>
+                        <p>Add Your Photo Here</p>
+                        <small>Replace this in CSS with: background-image: url('your-photo.jpg')</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <!-- CUSTOMIZATION TIP: Update contact information in the JavaScript file and form action URL if needed -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to order or have questions? We'd love to hear from you!</p>
+            </div>
+            
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="Tell us about your custom order or ask any questions..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <!-- CUSTOMIZATION TIP: Update phone numbers, email, and social media handles below -->
+                    <div class="contact-item">
+                        <h4>📱 WhatsApp Orders</h4>
+                        <p>For quick orders and inquiries</p>
+                        <a href="https://wa.me/919653174705" target="_blank" class="btn btn--outline">
+                            Chat on WhatsApp
+                        </a>
+                        <p class="contact-number">+91-9653174705</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>📧 Email</h4>
+                        <p>neelpujari65@gmail.com</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>📱 Follow Us</h4>
+                        <div class="social-links">
+                            <!-- CUSTOMIZATION TIP: Update social media links below -->
+                            <a href="https://www.instagram.com/croshann_?igsh=MXFxcDNiYjh1Z3pyaQ==" target="_blank">📸 Instagram</a>
+                            <a href="https://facebook.com/CroshAnnHandmade" target="_blank">📘 Facebook</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Order Instructions -->
+                    <div class="contact-item">
+                        <h4>🛍️ How to Order</h4>
+                        <ol class="order-steps">
+                            <li>Browse our products above</li>
+                            <li>Click "Contact for Order" on your favorite items</li>
+                            <li>Send us a WhatsApp message</li>
+                            <li>We'll confirm details and pricing</li>
+                            <li>Enjoy your handcrafted treasure!</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REMOVED: Shopping cart modal (as requested) -->
+    <!-- REMOVED: Product details modal (simplified to direct contact) -->
+
+    <!-- ===== FOOTER SECTION ===== -->
+    <!-- CUSTOMIZATION TIP: Update footer content below. Logo in footer can be modified in CSS -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <!-- Small logo in footer -->
+                    <div class="footer-logo">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" alt="Crosh Ann">
+                        <h4>Crosh Ann</h4>
+                    </div>
+                    <p>Handcrafted with Love, Crocheted with Care</p>
+                    <p>Creating beautiful, unique crochet accessories that bring joy to your everyday life.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <!-- CUSTOMIZATION TIP: Update contact information below -->
+                    <p>📱 WhatsApp: +91-9876543210</p>
+                    <p>📧 Email: hello@croshann.com</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/crosh_ann" target="_blank">Instagram</a>
+                        <a href="https://facebook.com/CroshAnnHandmade" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Crosh Ann. All rights reserved. Made with 💝 and lots of yarn!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
