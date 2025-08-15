@@ -1064,10 +1064,10 @@ body {
 
 /* Custom Order Feature */
 .hero-feature--custom {
-  grid-column: 2;
-  max-width: 100%;
-  margin: 0;
-  padding: 1.5rem 1.25rem;
+  grid-column: 1 / -1;
+  max-width: 500px;
+  margin: 1rem auto 0;
+  padding: 1.5rem;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   width: 100%;
   box-sizing: border-box;
@@ -1086,16 +1086,9 @@ body {
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .hero-features {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    padding: 0 0.5rem;
-  }
-  
-  .hero-feature--custom {
-    grid-column: 1 / -1;
-    max-width: 100%;
-    margin: 0.5rem 0 0;
-    padding: 1.5rem 1rem;
+    padding: 0 1rem;
   }
   
   .hero-feature {
@@ -1109,6 +1102,26 @@ body {
   .hero-feature span:not(.feature-icon) {
     font-size: 1rem;
   }
+}
+
+@media (max-width: 480px) {
+  .hero-features {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+  }
+  
+  .hero-feature {
+    padding: 1.25rem 1rem;
+  }
+  
+  .hero-feature--custom {
+    margin-top: 0.5rem;
+    padding: 1.25rem 1rem;
+  }
+  
+  .hero-feature .feature-icon {
+    font-size: 2rem;
+  }
   
   .hero-feature--custom .feature-icon {
     font-size: 2.25rem;
@@ -1116,15 +1129,6 @@ body {
   
   .hero-feature--custom span:not(.feature-icon) {
     font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px){
-  .hero-features{
-    grid-template-columns: 1fr;
-  }
-  .hero-feature{
-    height: auto;
   }
 }
 
