@@ -991,21 +991,94 @@ body {
 .hero-features {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
-  align-items: start;
+  gap: 1.5rem;
+  align-items: stretch;
+  margin: 2.5rem 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
 }
 
 .hero-feature {
   background: var(--feature-bg, #fff);
-  padding: 1rem;
-  border-radius: 8px;
+  padding: 2rem 1.25rem;
+  border-radius: 16px;
   text-align: center;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  height: 120px; /* adjust if you want taller/shorter */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-feature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hero-feature:hover::before {
+  opacity: 1;
+}
+
+.hero-feature .feature-icon {
+  font-size: 2.75rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  min-height: 2.75rem;
+}
+
+.hero-feature:hover .feature-icon {
+  transform: translateY(-5px) scale(1.1);
+}
+
+.hero-feature span:not(.feature-icon) {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+}
+
+.hero-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Order Feature */
+.hero-feature--custom {
+  grid-column: 1 / -1;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.hero-feature--custom .feature-icon {
+  font-size: 2.5rem;
+}
+
+.hero-feature--custom span:not(.feature-icon) {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
 }
 
 /* Place Custom Orders under the middle column (Premium Quality) */
@@ -1401,12 +1474,20 @@ body {
   justify-content: center;
   color: var(--color-text-secondary);
   text-align: center;
-  border: 2px dashed var(--color-border);
-  gap: var(--space-12);
-  /* CUSTOMIZATION TIP: Replace this placeholder with actual photo */
-  /* background-image: url('your-artisan-photo.jpg'); */
-  /* background-size: cover; */
-  /* background-position: center; */
+  border: 2px solid var(--color-border);
+  overflow: hidden;
+  position: relative;
+  background-image: url('artist.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image .image-placeholder:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .image-placeholder span {
