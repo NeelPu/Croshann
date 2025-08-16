@@ -30,12 +30,12 @@
 const products = [
     {
         id: 1,
-        name: "Cute Elephant Keychain", // CUSTOMIZE: Product name
+        name: "Cute Octopus Keychain", // CUSTOMIZE: Product name
         category: "Animal Keychains",   // CUSTOMIZE: Category (must match filter buttons)
                            // CUSTOMIZE: USD price
         priceINR: 999,                 // CUSTOMIZE: INR price
-        image: "elephant.png", // CUSTOMIZE: Product image URL
-        description: "Adorable crocheted elephant keychain in soft gray yarn with intricate details" // CUSTOMIZE: Product description
+        image: "octopus.jpeg", // CUSTOMIZE: Product image URL
+        description: "Adorable crocheted Octopus keychain in soft blue yarn with intricate details" // CUSTOMIZE: Product description
     },
     {
         id: 2,
@@ -58,29 +58,29 @@ const products = [
     {
         id: 4,
         name: "Sunflower Charm",
-        category: "Flower Keychains",
+        category: "Flower Charms",
         
         priceINR: 649,
-        image: "sunflower.png",
+        image: "sunflower.jpeg",
         description: "Bright and cheerful crocheted sunflower charm with vibrant colors"
     },
     {
         id: 5,
-        name: "Rose Keychain",
-        category: "Flower Keychains",
+        name: "Rose Drawstring Pouch",
+        category: "Flower Pouches",
        
         priceINR: 729,
-        image: "rose.jpg",
+        image: "rose.jpeg",
         description: "Elegant crocheted rose keychain in soft romantic pink"
     },
     {
         id: 6,
-        name: "Strawberry Charm",
-        category: "Food Keychains",
+        name: "Cherry Charm",
+        category: "Fruit Charms",
         
         priceINR: 489,
-        image: "strawberry.jpeg",
-        description: "Adorable crocheted strawberry keychain in bright red with green top"
+        image: "cherry.jpeg",
+        description: "Adorable crocheted cherry keychain in bright red with green top"
     },
     {
         id: 7,
@@ -330,7 +330,7 @@ function contactForOrder(product) {
 🏷️ *Product Details:*
 • Name: ${product.name}
 • Category: ${product.category}  
-• Price: ₹${product.priceINR} (${product.price} USD)
+• Price: ₹${product.priceINR} 
 • Description: ${product.description}
 
 I would like to know more about availability and ordering process. Thank you! 🧶✨`;
@@ -356,7 +356,7 @@ function showProductDetails(product) {
     
 📝 Description: ${product.description}
 🏷️ Category: ${product.category}
-💰 Price: ₹${product.priceINR} (${product.price} USD)
+💰 Price: ₹${product.priceINR}
 
 Ready to order? Click the "Contact for Order" button!`;
     

@@ -52,7 +52,7 @@
             <!-- Call-to-action buttons -->
             <div class="hero-actions">
                 <a href="#products" class="btn btn--primary btn--lg">Explore Collection</a>
-                <a href="https://wa.me/919653174705" target="_blank" class="btn btn--outline btn--lg">
+                <a href="https://wa.me/919653174705"_blank" class="btn btn--outline btn--lg">
                     📱 WhatsApp Order
                 </a>
             </div>
@@ -135,7 +135,6 @@
             <div class="search-container">
                 <input type="text" id="searchInput" class="form-control" placeholder="Search for products...">
             </div>
-                        `<span class="product-price">$${product.price}</span>`
             <!-- Products Grid - Products are dynamically loaded from JavaScript -->
             <!-- CUSTOMIZATION TIP: Products are automatically generated from the products array in app.js -->
             <div class="products-grid" id="productsGrid">
@@ -176,7 +175,12 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="image-placeholder"></div>
+                    <!-- CUSTOMIZATION TIP: Replace this placeholder with actual artisan photo -->
+                    <div class="image-placeholder">
+                        <span>🧶</span>
+                        <p>Add Your Photo Here</p>
+                        <small>Replace this in CSS with: background-image: url('your-photo.jpg')</small>
+                    </div>
                 </div>
             </div>
         </div>
